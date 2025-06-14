@@ -1,5 +1,5 @@
 """
-URL configuration for myfistproject project.
+URL configuration for myfirstproject myfirstproject.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.2/topics/http/urls/
@@ -18,10 +18,8 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('main.urls')),
-    path('movies/', include('movies.urls'))
+    path('', include('apps.main.urls', namespace='main')),  # Changed to 'main'
+    path('movies/', include('apps.movies.urls', namespace='movies')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

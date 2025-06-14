@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contacts{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        <h1>Welcome to MySite!</h1>
+        <p>These are my contacts.</p>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<!-- Page-specific JavaScript -->
+<script>
+    console.log("Home page loaded");
+</script>
+{% endblock %}

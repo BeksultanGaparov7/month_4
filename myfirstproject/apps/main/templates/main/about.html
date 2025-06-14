@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+        <h1>Welcome to MySite!</h1>
+        <p>This the info about my site.</p>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<!-- Page-specific JavaScript -->
+<script>
+    console.log("Home page loaded");
+</script>
+{% endblock %}
